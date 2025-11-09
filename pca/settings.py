@@ -37,6 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # third-party
+    "rest_framework",
+    "django_crontab",
+
+    # local apps
+    "analysis",
 ]
 
 MIDDLEWARE = [
@@ -104,8 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
-
+TIME_ZONE = "Asia/Kolkata"
 USE_I18N = True
 
 USE_TZ = True
@@ -120,3 +126,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CRONJOBS = [
+    # example: run daily at midnight server time
+    ('0 0 * * *', 'analysis.cron.run_daily_analysis')
+]
