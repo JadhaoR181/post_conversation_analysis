@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-wqv-$e=dk0kpn%48=x8_^7yd_hd(!e+)n92s#vkyl-kzsuj&hn
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.ngrok-free.dev']
+
 
 
 # Application definition
@@ -128,6 +129,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRONJOBS = [
-    # example: run daily at midnight server time
+    # run every day at midnight server time
     ('0 0 * * *', 'analysis.cron.run_daily_analysis')
 ]
