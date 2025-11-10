@@ -35,7 +35,6 @@ post_conversation_analysis/
 ├── pca/
 │   ├── settings.py            # Project settings
 │   ├── urls.py                # API routes
-│   ├── celery.py              # (Optional) Celery configuration
 │
 ├── manage.py
 ├── requirements.txt
@@ -279,8 +278,8 @@ For this internship project:
 ## 🏁 Final Notes
 
 ✅ All assignment parts completed:  
-- **Part 1:** Data Models & Setup  
-- **Part 2:** Conversation Analysis API  
+- **Part 1:** Post Conversation Analysis  
+- **Part 2:** Django Application 
 - **Part 3:** Daily Automation (cron / cloud trigger)  
 - **Part 4:** Documentation (this README)
 
