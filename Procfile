@@ -1,0 +1,1 @@
+web: gunicorn pca_project.wsgi
